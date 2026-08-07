@@ -3,59 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhavesh Gorsiya | Game Developer Portfolio</title>
+    <title>Bhavesh Gorasiya | Senior Unity Game Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Bhavesh Gorsiya</h1>
-        <p>Unity Game Developer | Kids' Games & Interactive Experiences</p>
-        <div class="contact-links">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a> | 
-            <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+        <div class="container header-content">
+            <h1>Bhavesh Gorasiya</h1>
+            <h2>Senior Unity Game Developer</h2>
+            <p class="bio">Accomplished Senior Unity Engineer with 8+ years of experience architecting, optimizing, and deploying high-performance mobile, cross-platform, and immersive (XR) games for global audiences.</p>
+            <div class="contact-links">
+                <span>📍 Gujarat, India (Open to Global Remote)</span> | 
+                <a href="mailto:b7gorsiya@gmail.com">b7gorsiya@gmail.com</a> | 
+                <span>+91 8460419943</span>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/b7gorsiya" target="_blank" class="btn">GitHub</a>
+                <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="btn">LinkedIn</a>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <h2>Featured Games & Projects</h2>
-        <div class="grid">
+        
+        <section class="skills-section">
+            <h2>Technical Core Competencies</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Unity 2D/3D & Custom Editors</span>
+                <span class="skill-tag">C# OOP & SOLID Patterns</span>
+                <span class="skill-tag">Memory & Profiling (CPU/GPU)</span>
+                <span class="skill-tag">Asset Streaming & Addressables</span>
+                <span class="skill-tag">Multiplayer (Photon) & LiveOps</span>
+                <span class="skill-tag">AR/VR (HoloLens 2, Meta Quest)</span>
+                <span class="skill-tag">AdMob & Tenjin SDKs</span>
+            </div>
+        </section>
 
-            <!-- Game Card 1 -->
-            <div class="card">
-                <h3>Kids' Adventure Game</h3>
-                <p class="tech">Unity • C# • 2D Platformer</p>
-                <p>An engaging educational game designed for children featuring intuitive mechanics and vibrant art.</p>
-                <div class="card-links">
-                    <a href="https://YOUR_PLAYABLE_LINK_OR_GITHUB_REPO" target="_blank">Play / View Code</a>
-                </div>
+        <section class="experience-section">
+            <h2>Professional Experience</h2>
+            
+            <div class="exp-card">
+                <h3>Senior / Lead Unity Engineer</h3>
+                <p class="exp-company">Crimson Games LLC (Remote) | Nov 2024 - Present</p>
+                <ul>
+                    <li>Drive high-fidelity casual titles with millions of downloads and 5,000-6,000 DAU.</li>
+                    <li>Architected "Jigsaw: India Travel" from scratch, building core puzzle-snapping logic and save systems.</li>
+                    <li>Overhauled UI/UX hierarchies for "Colour Game: Gods & Stories" to boost menu responsiveness.</li>
+                    <li>Deployed content streaming via Unity Addressables to minimize device memory usage.</li>
+                </ul>
             </div>
 
-            <!-- Game Card 2 -->
-            <div class="card">
-                <h3>Humanitarian Relief Simulation</h3>
-                <p class="tech">Unity • C# • Developer Volunteer (HOPE)</p>
-                <p>Interactive simulation experience created during volunteer development work with HOPE in London.</p>
-                <div class="card-links">
-                    <a href="https://YOUR_PLAYABLE_LINK_OR_GITHUB_REPO" target="_blank">View Project</a>
-                </div>
+            <div class="exp-card">
+                <h3>Senior Unity Developer</h3>
+                <p class="exp-company">Ether games (Remote) | March 2022 - Nov 2024</p>
+                <ul>
+                    <li>Engineered scalable, real-time multiplayer systems for high-stakes PvP card battle loops (Pitch5T).</li>
+                    <li>Spearheaded LiveOps frameworks, Tenjin tracking, and automated AdMob architectures.</li>
+                    <li>Architected custom Unity level-design editors, accelerating release cycles.</li>
+                    <li>Directed prototyping of advanced immersive XR experiences utilizing HoloLens 2 and Meta Quest.</li>
+                </ul>
             </div>
 
-            <!-- Game Card 3 -->
-            <div class="card">
-                <h3>3D Mobile Puzzle Game</h3>
-                <p class="tech">Unity • C# • Optimization</p>
-                <p>A touch-based mobile puzzle game focused on performance optimization and smooth UI/UX.</p>
-                <div class="card-links">
-                    <a href="https://YOUR_PLAYABLE_LINK_OR_GITHUB_REPO" target="_blank">View Project</a>
-                </div>
+            <div class="exp-card">
+                <h3>Volunteer Game Developer</h3>
+                <p class="exp-company">Humanitarian operations, London (On-Site) | Jun 2020 - May 2021</p>
+                <ul>
+                    <li>Programmed an interactive, LEGO-inspired educational AR game with server-authenticated databases.</li>
+                    <li>Maintained strict 60 FPS benchmarks on WebGL, iOS, and Android platforms through deep rendering optimization.</li>
+                </ul>
             </div>
 
-        </div>
+            <div class="exp-card">
+                <h3>Sr. Game Developer</h3>
+                <p class="exp-company">Thunder game studio, Gujarat (On-Site) | May 2017 - Jan 2019</p>
+                <ul>
+                    <li>Governed feature production for Match-3, Puzzle, and Platformers from concept to global release.</li>
+                    <li>Developed internal editor tools and installed high-yield ad-network matrices.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <h2>Featured Games & Projects</h2>
+            <div class="grid">
+
+                <!-- Crimson Games -->
+                <div class="card">
+                    <div class="card-image"><img src="images/india-jigsaw.jpg" alt="India Travel Jigsaw"></div>
+                    <div class="card-content">
+                        <h3>Jigsaw: India Travel</h3>
+                        <p class="tech">Crimson Games • Unity • Addressables</p>
+                        <p>Solo-architected culture-focused jigsaw puzzle featuring core piece snap mechanics and custom save progression.</p>
+                        <div class="card-links"><a href="https://play.google.com/store/apps/details?id=fancy.jigsaw.india.travel.game.free" target="_blank">Google Play</a></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"><img src="images/god-coloring.jpg" alt="Gods Colouring Game"></div>
+                    <div class="card-content">
+                        <h3>Happy Paint: Gods & Stories</h3>
+                        <p class="tech">Crimson Games • Unity • UI Optimization</p>
+                        <p>Color-by-number app with highly optimized UI layout rendering passes for smooth cross-device performance.</p>
+                        <div class="card-links"><a href="https://play.google.com/store/apps/details?id=apps.free.happy.paint.colouring.book.colour.number.god.hindu.images" target="_blank">Google Play</a></div>
+                    </div>
+                </div>
+
+                <!-- Ether Games -->
+                <div class="card">
+                    <div class="card-image"><img src="images/pitch5t.jpg" alt="Pitch5T PvP"></div>
+                    <div class="card-content">
+                        <h3>Pitch5T: PvP Cricket Battle</h3>
+                        <p class="tech">Ether games • Unity • Real-Time Multiplayer</p>
+                        <p>Strategic PvP sports card game utilizing real-time multiplayer gameplay systems and advanced race-condition resolution.</p>
+                        <div class="card-links"><a href="https://play.google.com/store/apps/details?id=pitch5t.cricket.card.game.real.wccricket&hl=en_IN" target="_blank">Google Play</a></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"><img src="images/battlefront.jpg" alt="Battlefront"></div>
+                    <div class="card-content">
+                        <h3>Battlefront</h3>
+                        <p class="tech">Ether IT Solutions • Unity • Shooter</p>
+                        <p>Dynamic battle simulation featuring networked combat systems and weapon mechanics.</p>
+                        <div class="card-links"><a href="https://www.etheritsolutions.com/" target="_blank">View Company</a></div>
+                    </div>
+                </div>
+
+                <!-- Humanitarian / HOPE -->
+                <div class="card">
+                    <div class="card-image placeholder-image"><div class="nda-badge">Confidential / NDA</div></div>
+                    <div class="card-content">
+                        <h3>Educational AR Kids Game</h3>
+                        <p class="tech">Humanitarian operations • AR Foundation</p>
+                        <p>Interactive LEGO-inspired educational AR experience featuring server-authenticated asset distribution and encrypted profiles.</p>
+                    </div>
+                </div>
+
+                <!-- Indie / Solo -->
+                <div class="card">
+                    <div class="card-image"><img src="images/labyrinth-maze.jpg" alt="Labyrinth Maze"></div>
+                    <div class="card-content">
+                        <h3>Labyrinth Maze Brain Game</h3>
+                        <p class="tech">Indie Project • Unity • 3D Mobile</p>
+                        <p>Logic-driven 3D maze navigation puzzle built with flexible procedural difficulty scales.</p>
+                        <div class="card-links"><a href="https://play.google.com/store/apps/details?id=com.fcgs.free.game.puzzel.labyrinth.maze.braingame.logic" target="_blank">Google Play</a></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"><img src="images/taptap-bounce.jpg" alt="Tap Tap Bounce"></div>
+                    <div class="card-content">
+                        <h3>Tap Tap Bounce</h3>
+                        <p class="tech">Indie Project • Unity • Arcade</p>
+                        <p>Hyper-casual mobile arcade bounce game emphasizing fluid rigidbodies and precise touch inputs.</p>
+                        <div class="card-links"><a href="https://play.google.com/store/apps/details?id=com.fcgamestudio.taptapbounce" target="_blank">Google Play</a></div>
+                    </div>
+                </div>
+
+                <!-- Thunder Game Studio -->
+                <div class="card"><div class="card-image"><img src="images/word-connect.jpg" alt="Word Connect"></div><div class="card-content"><h3>Word Connect</h3><p class="tech">Thunder Game Studio</p><p>Dynamic word-linking puzzle.</p><div class="card-links"><a href="https://www.thundergamestudio.com/portfolio" target="_blank">Studio Page</a></div></div></div>
+                <div class="card"><div class="card-image"><img src="images/shoot-bubble.jpg" alt="Shoot Bubble"></div><div class="card-content"><h3>Shoot Bubble</h3><p class="tech">Thunder Game Studio</p><p>Physics-based 2D arcade matcher.</p><div class="card-links"><a href="https://www.thundergamestudio.com/portfolio" target="_blank">Studio Page</a></div></div></div>
+                <div class="card"><div class="card-image"><img src="images/jewel-legend.jpg" alt="Jewel Legend"></div><div class="card-content"><h3>Jewel Legend</h3><p class="tech">Thunder Game Studio</p><p>Match-3 puzzle with cascade algorithms.</p><div class="card-links"><a href="https://www.thundergamestudio.com/portfolio" target="_blank">Studio Page</a></div></div></div>
+                <div class="card"><div class="card-image"><img src="images/sudoku.jpg" alt="Sudoku"></div><div class="card-content"><h3>Sudoku</h3><p class="tech">Thunder Game Studio</p><p>Logic game with state persistence.</p><div class="card-links"><a href="https://www.thundergamestudio.com/portfolio" target="_blank">Studio Page</a></div></div></div>
+                <div class="card"><div class="card-image"><img src="images/solitaire.jpg" alt="Solitaire Classic"></div><div class="card-content"><h3>Solitaire Classic</h3><p class="tech">Thunder Game Studio</p><p>Digital Klondike Solitaire.</p><div class="card-links"><a href="https://www.thundergamestudio.com/portfolio" target="_blank">Studio Page</a></div></div></div>
+                <div class="card"><div class="card-image"><img src="images/block-puzzle.jpg" alt="Block Puzzle"></div><div class="card-content"><h3>Block Puzzle</h3><p class="tech">Thunder Game Studio</p><p>Spatial grid placement puzzle.</p><div class="card-links"><a href="https://www.thundergamestudio.com/portfolio" target="_blank">Studio Page</a></div></div></div>
+                <div class="card"><div class="card-image"><img src="images/tile-match.jpg" alt="Tile Match"></div><div class="card-content"><h3>Tile Match</h3><p class="tech">Thunder Game Studio</p><p>Tile-stacking level mechanics.</p><div class="card-links"><a href="https://www.thundergamestudio.com/portfolio" target="_blank">Studio Page</a></div></div></div>
+
+                <!-- Video Demos -->
+                <div class="card"><div class="video-container"><iframe src="https://www.youtube.com/embed/tXKLU54EVZU" title="Demo 1" frameborder="0" allowfullscreen></iframe></div><div class="card-content"><h3>Unity Gameplay Showcase 1</h3><p class="tech">Video Demonstration</p></div></div>
+                <div class="card"><div class="video-container"><iframe src="https://www.youtube.com/embed/msJKMdQsnJs" title="Demo 2" frameborder="0" allowfullscreen></iframe></div><div class="card-content"><h3>Unity Gameplay Showcase 2</h3><p class="tech">Video Demonstration</p></div></div>
+                <div class="card"><div class="video-container"><iframe src="https://www.youtube.com/embed/1-r6KrTVzwE" title="Demo 3" frameborder="0" allowfullscreen></iframe></div><div class="card-content"><h3>Unity Gameplay Showcase 3</h3><p class="tech">Video Demonstration</p></div></div>
+                <div class="card"><div class="video-container"><iframe src="https://www.youtube.com/embed/UBTYhaS3OJw" title="Demo 4" frameborder="0" allowfullscreen></iframe></div><div class="card-content"><h3>Unity Gameplay Showcase 4</h3><p class="tech">Video Demonstration</p></div></div>
+
+            </div>
+        </section>
+
+        <section class="education-section">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>PGDip in Computing</strong> - De Montfort University, Leicester (2019-2020)</li>
+                <li><strong>BE in Computer Science</strong> - HJD ITER (2014-2017)</li>
+                <li><strong>Diploma in Computer Engineering</strong> - B.S. Patel Polytechnic (2011-2014)</li>
+            </ul>
+        </section>
+
     </main>
 
     <footer>
-        <p>© 2026 Bhavesh Gorsiya. Built with GitHub Pages.</p>
+        <p>© 2026 Bhavesh Gorasiya. Built with GitHub Pages.</p>
     </footer>
 
 </body>

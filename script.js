@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cards.forEach(card => {
             const categories = card.getAttribute("data-category") || "";
             if (filter === "all" || categories.includes(filter)) {
-                card.style.display = "block";
+                card.style.display = "flex"; // Changed from 'block' to 'flex' to match card css
             } else {
                 card.style.display = "none";
                 // Force pause videos when the card is hidden by the filter
@@ -32,16 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Helper function to pause media inside a specific card
+    // Helper function to pause media inside a specific card when filtered out
     function pauseVideoInCard(card) {
-        const video = card.querySelector('video');
-        const iframe = card.querySelector('iframe');
-        
-        if (video) {
-            video.pause();
-        }
-        if (iframe && iframe.src.includes('youtube.com')) {
-            iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        try {
+            const video = card.querySelector('video');
+            const iframe = card.querySelector('iframe');
+            
+            if (video) {
+                video.pause();
+            }
+            if (iframe && iframe.src.includes('youtube.com')) {
+                iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            }
+        } catch (e) {
+            console.warn("Could not pause video:", e);
         }
     }
 
@@ -58,21 +62,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const videoObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const target = entry.target;
-
-            if (entry.isIntersecting) {
-                // Video is on screen -> Play
-                if (target.tagName.toLowerCase() === 'video') {
-                    target.play().catch(e => console.log("Autoplay prevented by browser:", e));
-                } else if (target.tagName.toLowerCase() === 'iframe') {
-                    target.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            
+            try {
+                if (entry.isIntersecting) {
+                    // Video is on screen -> Play
+                    if (target.tagName.toLowerCase() === 'video') {
+                        target.play().catch(() => {}); // Catch play errors silently
+                    } else if (target.tagName.toLowerCase() === 'iframe' && target.src.includes('youtube.com')) {
+                        target.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                    }
+                } else {
+                    // Video scrolled out of view -> Pause
+                    if (target.tagName.toLowerCase() === 'video') {
+                        target.pause();
+                    } else if (target.tagName.toLowerCase() === 'iframe' && target.src.includes('youtube.com')) {
+                        target.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                    }
                 }
-            } else {
-                // Video scrolled out of view -> Pause
-                if (target.tagName.toLowerCase() === 'video') {
-                    target.pause();
-                } else if (target.tagName.toLowerCase() === 'iframe') {
-                    target.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                }
+            } catch (error) {
+                console.warn("Media interaction blocked:", error);
             }
         });
     }, observerOptions);
